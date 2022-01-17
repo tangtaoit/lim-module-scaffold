@@ -7,6 +7,8 @@
     "typescript": "^4.5.4"
   },
   "scripts": {
-    "build": "tsc"
+    "clean": "rm -rf ./lib",
+    "copy-files": "cp -rf ./src/assets/ ./lib/assets",
+    "build": "yarn clean && tsc && yarn copy-files"
   }
 }
